@@ -31,9 +31,11 @@ upstream	https://github.com/ashuprince121/Prepration_Code_Repository.git (push)
 3. Read the description, and make sure to ask questions about anything that is unclear.
 5. Make sure you have the latest version of the project with `git pull upstream master` or `git merge upstream/master`.
 6. Create a new branch with `git checkout -b <new-branch-name>`. The name should include the issue number and the topic you're working in or simply information about the task you are going to do.  For example, if its about issue #11: resolving a typo in readme, your command could be `git checkout -b 11__resolve-typo-readme`.
-7. Make and commit your changes on this new branch, and make a PR when you're ready. [Here are some directions on the process](http://www.dasblinkenlichten.com/how-to-create-a-github-pull-request-pr/).
-8. When creating your PR, be sure to make your pull request to the `master` feature branch: 
-9. See your pull requests here: https://github.com/ashuprince121/Prepration_Code_Repository/pulls
+7. Make and commit your changes on this new branch locally using `git commit -m "<your-descriptive-message>"`
+8. After the added all your changes push it to your remote repo using this command `git push –u origin <new-branch-created-before>`
+9. Make a PR when you're ready in Github. [Here are some directions on the process](http://www.dasblinkenlichten.com/how-to-create-a-github-pull-request-pr/).
+10. When creating your PR, be sure to make your pull request to the `master` feature branch: 
+11. See your pull requests here: https://github.com/ashuprince121/Prepration_Code_Repository/pulls
 
 ## Note
 If you want that your PR to count as part of a contribution in the Hacktoberfest, remember to join the event in this [link](https://hacktoberfest.digitalocean.com/)
