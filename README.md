@@ -1,4 +1,4 @@
-# Prepration_Code_Repository
+# Prepration Code Repository
 
 ## A repo for all the beginners for this Hacktober- 2020 
 
@@ -9,11 +9,11 @@
   
   Dont be afraid, it's pretty simple! Just follow these steps:
   
-- Read the RULES
+- Read the [RULES](#our-rules)
 - Fork the repo
 - Create a new file in the forked repo
 - Add practice code in any language of your choice
-- Create a PR to this repo
+- Create a PR to this repo, check out the [CONTRIBUTING](CONTRIBUTING.md) file for more details
   
   
 **Don't forget to document your work! It will help others understand your code at a glance**
@@ -25,7 +25,6 @@
 ### Contributor Covenant Code of Conduct
 
 In the interest of fostering an open and welcoming environment, we as contributors and maintainers pledge to making participation in our project and our community a harassment-free experience for everyone, regardless of age, body size, disability, ethnicity, sex characteristics, gender identity and expression, level of experience, education, socio-economic status, nationality, personal appearance, race, religion, or sexual identity and orientation.
-
 
 ## Our RULES
 
