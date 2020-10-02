@@ -1,3 +1,4 @@
+//Program to remove a sub-string from a string
 #include<stdio.h>
 
 char* shifter(char a[], char b[], int i, int j)
