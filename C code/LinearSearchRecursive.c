@@ -3,6 +3,7 @@
 
 int linear_search(int* p, int a, int n, int i)
 {
+  //recursion breakers
   if(p[i] == a)
     return i;
   else if(i == n)
@@ -11,6 +12,7 @@ int linear_search(int* p, int a, int n, int i)
     linear_search(p,a,n,++i);
 }
 
+//main function
 int main()
 {
   int n, *p, i, a, flag = 0;
