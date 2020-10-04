@@ -2,93 +2,66 @@
 #include<stdio.h>
 #include<math.h>
 
-//for tagging the type of root
-typedef enum type
-{
-  DISTINCT,
-  EQUAL,
-  COMPLEX
-}type_t;
-
 //stores data related to a quadratic equation
 typedef struct equation
 {
-  float a;
-  float b;
-  float c;
-  float r1;
-  float r2;
-  type_t tag;
+  double a;
+  double b;
+  double c;
+  double d;
+  double r1;
+  double r2;
 }equation_t;
 
-//determines the value of discriminent
-int checker(int a, int b, int c)
-{
-  float determinant = (b*b)-(4*a*c);
-  if(determinant>0)
-    return 1;
-  else if(determinant<0)
-    return -1;
-  else
-    return 0;
-}
 
-//determine whether the roots are distinct, equal or complex
-type_t tager(int a, int b, int c)
+//Function to determine the solution of the qudratic equation
+void solver(equation_t* p)
 {
-  int check = checker(a,b,c);
-  if(check == -1)
-    return  COMPLEX;
-  if(check == 0)
-    return EQUAL;
-  else
-    return DISTINCT;
+  double a = p->a;
+  double b = p->b;
+  double c = p->c;
+  double d = (b*b)-(4*a*c);
+  double r1, r2;
+
+  if(d > 0)
+  {
+    r1 = ( -b + sqrt(d)) / (2 * a);
+    r2 = ( -b - sqrt(d)) / (2 * a);
   }
-
-//determines the solution when the roots are distinct
-int dist_solver(equation_t* p)
-{
-  int a = p->a;
-  int b = p->b;
-  int c = p->c;
-  int d = (b*b)-(4*a*c);
-  p->r1 = ( -b + sqrt(d)) / (2* a);
-  p->r2 = ( -b - sqrt(d)) / (2* a);
-  return 1;
+  else if(d == 0)
+  {
+    r1 = r2 = -b/(2*a);
+  }
+  else
+  {
+    r1 = -b/(2*a);
+    r2 = sqrt(-d)/(2*a);
+  }
+  p->d = d;
+  p->r1 = r1;
+  p->r2 = r2;
 }
-
-//determines the solution when the roots are equal
-int equa_solver(equation_t* p)
+//Function to print the solution of the quadratic equation
+void print(equation_t p)
 {
-  int a = p->a;
-  int b = p->b;
-  p->r1 = p->r2 = -b/(2*a);
-  return 1;
-}
-
-//determine the solution, when the roots are complex
-int comp_solver(equation_t* p)
-{
-  int a = p->a;
-  int b = p->b;
-  int c = p->c;
-  int d = (b*b)-(4*a*c);
-  printf("Roots are Complex\n");
-  printf("Root 1 : %.2f+%.2fi\n",-(float)b/(2*a),sqrt(-d)/(2*a));
-  printf("Root 2 : %.2f-%.2fi\n",-(float)b/(2*a),sqrt(-d)/(2*a));
-  return 0;
-}
-
-//solves the equation by calling required functions
-int solver(equation_t* p)
-{
-  p->tag = tager(p->a,p->b,p->c);
-  if(p->tag == DISTINCT)
-    dist_solver(p);
-  else if(p->tag == EQUAL)
-    equa_solver(p);
-  else if(p->tag == COMPLEX)
-    comp_solver(p);
+  if(p.d > 0)
+  {
+    printf("\nRoots are Distinct\n");
+    printf("Root 1 : %.4lf\n", p.r1);
+    printf("Root 2 : %.4lf\n", p.r2);
+  }
+  else if(p.d == 0)
+  {
+    printf("\nRoots are Equal\n");
+    printf("Root 1 : %.4lf\n", p.r1);
+    printf("Root 2 : %.4lf\n", p.r2);
+  }
+  else
+  {
+    printf("\nRoots are Complex");
+    printf("Root 1 : %.4lf+%.4lfi\n", p.r1, p.r2);
+    printf("Root 2 : %.4lf-%.4lfi\n", p.r1, p.r2);
+  }
 }
 
 //reading input from user
@@ -96,20 +69,13 @@ void read()
 {
   equation_t p;
   printf("Enter the coefficent of x squared : ");
-  scanf("%f",&p.a);
+  scanf("%lf",&p.a);
   printf("Enter the coefficent of x         : ");
-  scanf("%f",&p.b);
+  scanf("%lf",&p.b);
   printf("Enter the constant                : ");
-  scanf("%f",&p.c);
-  if(solver(&p))
-  {
-    if(p.tag == DISTINCT)
-      printf("Roots are Distinct\n");
-    else
-      printf("Roots are Equal\n");
-    printf("Root 1 : %.2f\n",p.r1);
-    printf("Root 2 : %.2f\n",p.r2);
-  }
+  scanf("%lf",&p.c);
+  solver(&p);
+  print(p);
 }
 
 //main function
