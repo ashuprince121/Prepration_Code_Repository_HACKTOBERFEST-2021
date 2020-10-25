@@ -1,0 +1,7 @@
+def reverse_words_order_and_swap_cases(sentence):
+    words = sentence.split()
+## reversing the words using reversed() function
+    words = list(reversed(words))
+## joining the words and printing
+    j = " ".join(words)
+    return j.swapcase()
