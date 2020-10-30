@@ -1,0 +1,20 @@
+#include<iostream>
+using namespace std;
+
+hDist(string s1, string s2)
+{
+	int d=0;
+	for(int i=0;i<32;i++)
+	{
+		if(s1[i]!=s2[i]) d++;
+	}
+	return d;
+//	return __builtin_popcount(s1^s2); //for integer	
+	
+}
+int main()
+{
+	string s1, s2;
+	cin>>s1>>s2;
+	cout<<"Hamming Distance: "<<hDist(s1,s2);
+}
