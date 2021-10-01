@@ -1,6 +1,7 @@
 # Prepration Code Repository
 
-## A repo for all the beginners for this Hacktober- 2021
+## A repo for all the beginners for this Hacktober- 2021 
+### Star this repo
 
 <p align = "center"><img src = "https://media.giphy.com/media/h408T6Y5GfmXBKW62l/giphy.gif" width = 30%></p>
   
