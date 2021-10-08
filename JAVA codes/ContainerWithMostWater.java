@@ -10,7 +10,6 @@ Output: 16
 
 class Solution {
     // function to calculate container with most water
-    public int maxArea(int[] height) {
     public int maxArea(int[] height) {//array with heights of barriers is provided
         int maxwater = 0, left = 0, right = height.length - 1;
         while (left < right) {
