@@ -1,3 +1,4 @@
+//Program to perform linear search recursively
 #include<stdio.h>
 #include<malloc.h>
 

@@ -1,0 +1,39 @@
+#include<stdio.h>
+#include<conio.h>
+int main()
+{
+	int i,j,count=0,flag=0, m,a[10][10];
+	printf("Enter The No of vertices\n");
+	scanf("%d",&m);
+	printf("Enter the adjacency matix \n");
+	for(i=1;i<=m;i++)
+	{
+		for(j=1;j<=m;j++)
+		{
+			scanf("%d",&a[i][j]);
+		}
+	}
+	for(i=1;i<=m;i++)
+	{
+		for(j=1;j<=m;j++)
+		{
+			count=count+a[i][j];
+			
+			if(j==m)
+			{
+				if(count%2!=0) 
+				{
+					printf("count is %d\n",count);
+					flag=1;
+					break;
+				}
+			}
+		}
+		count=0;
+	}
+	if(flag==1)
+		printf("the graph is not eular");
+	else 
+		printf("the graph is eular");
+	return 0;
+}

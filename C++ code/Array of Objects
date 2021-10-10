@@ -1,0 +1,51 @@
+#include<iostream>
+using namespace std;
+
+class student
+{
+	int rollno;
+	string name;
+	string course;
+	float fees;
+	
+	public:
+		void getdata(){
+			cout<<"Enter Roll no : ";
+			cin>>rollno;
+			cout<<"Enter Name : ";
+			cin>>name;
+			cout<<"Enter Course : ";
+			cin>>course;
+			cout<<"Enter Fees : ";
+			cin>>fees;
+			cout<<endl;
+		}
+		void putdata(){
+			cout<<"Roll No : "<<rollno<<endl;
+			cout<<"Name : "<<name<<endl;
+			cout<<"Course : "<<course<<endl;
+			cout<<"Fees : "<<fees<<endl;
+			cout<<endl;
+		}
+		
+};
+
+main()
+{
+	int i,n;
+	student obj[10];
+	cout<<"Enter The Total Number of Students \n";
+	cin>>n;
+	cout<<"Enter The Details : "<<endl;
+	cout<<endl;
+	for(i=0;i<n;i++)
+	{
+		obj[i].getdata();
+	}
+	cout<<endl;
+	cout<<"Details are : "<<endl;
+	for(i=0;i<n;i++)
+	{
+		obj[i].putdata();
+	}
+}
