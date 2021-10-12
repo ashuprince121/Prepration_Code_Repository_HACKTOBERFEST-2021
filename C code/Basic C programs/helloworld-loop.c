@@ -6,13 +6,12 @@
 */
 
 
-#include<stdio.h>
-
-int main()
-{
-	// the while loop condition always remains true so the loops keeps on repeating forever, until interrupted
-	while(1)
-		// prints hello world forever
-		printf ("hello world forever!");
-	return 0;
-}
+#include <stdio.h>  
+int main()  
+{  
+   for(;;)  
+   {  
+     printf("Hello world");  
+   }  
+return 0;  
+} 
