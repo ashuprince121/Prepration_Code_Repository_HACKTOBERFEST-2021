@@ -1,6 +1,7 @@
 from tkinter import *
 from timeit import default_timer as timer
 import random
+#Can also be done using PyAutoGUI module.
 
 window = Tk()
 
