@@ -1,6 +1,7 @@
 # Prepration Code Repository
 
-Note : ANY PULL REQUEST AFTER 24TH OCT 2021 WON'T BE ACCEPTED.Thanks for your participation.
+Note : ANY PULL REQUEST AFTER 24TH OCT 2021 WON'T BE ACCEPTED.
+Thanks for your participation.
 
 ## A repo for all the beginners for this Hacktober- 2021 
 ### Star this repo
